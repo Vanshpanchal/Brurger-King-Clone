@@ -1,0 +1,575 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Fredericka the Great', cursive;
+    overflow-x: hidden;
+    height: fit-content;
+    background-color: #F6F1EB;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    height: 60px;
+    margin-top: 20px;
+}
+
+.navbar nav ul {
+    display: flex;
+    margin-bottom: 50px;
+    margin-top: -10px;
+    align-items: center;
+}
+
+.navbar nav ul a img {
+    width: 65px;
+    height: 65px;
+    margin-top: 3px;
+    margin-left: 25px;
+}
+
+.navbar nav ul li {
+    list-style-type: none;
+    font-size: 18px;
+}
+
+#dine {
+    margin-left: 45px;
+    display: flex;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(238, 119, 0);
+    margin-top: 4px;
+    align-items: center;
+}
+
+.toogle {
+    cursor: pointer;
+    width: 63px;
+    height: 35px;
+    background-color: rgb(238, 119, 0);
+    display: flex;
+    align-items: center;
+    align-content: center;
+    border-radius: 100px;
+    position: relative;
+}
+
+.toogle::after {
+    content: '';
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    top: 5px;
+    left: 4px;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 90px;
+    transition: 0.5s;
+}
+
+input:checked+label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+input {
+    display: none;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+    margin-left: 15px;
+}
+
+#search {
+    width: 350px;
+    margin-top: 8px;
+    margin-left: 15px;
+    border-radius: 15px;
+    border: 1px solid rgb(198, 193, 193);
+    padding-left: 15px;
+    display: flex;
+    height: 35px;
+    background-color: transparent;
+}
+
+#search::placeholder {
+    background-image: url('location.svg');
+    background-repeat: no-repeat;
+    background-position: 3px;
+    font-size: 14px;
+    color: rgb(171, 109, 16);
+    padding: 25px;
+    font-weight: 600;
+}
+
+.option {
+    margin-top: 6px;
+    color: rgb(131, 131, 131);
+    display: flex;
+    font-size: 18px;
+    margin-left: 325px;
+    font-weight: 800;
+    justify-content: end;
+}
+
+.option svg {
+    height: 28px;
+    width: 28px;
+    margin-top: -4px;
+    color: rgb(131, 131, 131);
+    margin-left: 19px;
+    margin-right: 12px;
+}
+
+.option svg:hover {
+    transform: scale(115%);
+}
+
+#sicon svg {
+    margin-top: 3px;
+    height: 25px;
+    width: 25px;
+    color: rgb(238, 119, 0);
+    margin-left: 225px;
+}
+
+.cards {
+    display: flex;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffeca2;
+    background-image: url('https://burgerking-image.s3.amazonaws.com/products/Home/web/1x_web_20220221051506134895_1440x300jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 90%;
+    height: 500px;
+}
+
+.contain1 {
+    margin-top: 50px;
+    z-index: -1;
+}
+
+.contain1 .head {
+    background-color: #fff;
+    z-index: 1;
+}
+
+.contain1 h3 {
+    display: flex;
+    font-size: 35px;
+    margin-left: 65px;
+    margin-top: 25px;
+}
+
+.contain1 h4 {
+    font-size: 22px;
+    margin-left: 82%;
+    display: flex;
+    margin-top: -30px;
+    align-items: center;
+    font-family: 'Cabin', sans-serif;
+    text-transform: capitalize;
+    color: rgb(238, 119, 0);
+}
+
+.contain1 h4:hover {
+    transform: scale(104%);
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    background-color: rgba(245, 235, 220, 0.8);
+    background-color: #F6F1EB;
+    margin-top: 25px;
+    overflow-x: auto;
+
+}
+
+.menu::-webkit-scrollbar {
+    width: 0;
+}
+
+.menu .items {
+    margin-top: 50px;
+    display: flex;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    margin: 35px;
+}
+
+.menu .items img {
+    width: 150px;
+    height: 150px;
+}
+
+.names {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 24px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 800;
+    text-align: center;
+    align-items: center;
+}
+
+.names p {
+    margin-top: -8px;
+    text-transform: capitalize;
+
+}
+
+.deals {
+    z-index: 1;
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow-x: auto;
+    justify-content: space-around;
+}
+
+.deals .menu {
+    background-color: #f8f6f3;
+}
+
+.menu .Dpic {
+    margin-top: 50px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    width: 550px;
+    height: 280px;
+    border-radius: 15px;
+    margin: 35px;
+}
+
+.menu .Dpic img {
+    width: 512px;
+    height: 246px;
+}
+
+.Dname {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    align-items: center;
+
+}
+
+.deals h3 {
+    display: flex;
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-left: 65px;
+    margin-top: 25px;
+}
+
+.deals h4 {
+    font-size: 22px;
+    margin-left: 82%;
+    display: flex;
+    margin-top: -30px;
+
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+    color: rgb(238, 119, 0);
+}
+
+.menu .Fpic {
+    margin-top: 50px;
+    display: flex;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    width: 550px;
+    height: 250px;
+    border-radius: 15px;
+    margin: 35px;
+}
+
+.menu .Fpic img {
+    width: 30%;
+    border-radius: 15px;
+    height: 100%;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    height: 100%;
+    margin-left: 5%;
+}
+
+.info p {
+    display: flex;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 8%;
+}
+
+#iname {
+    font-size: 32px;
+    margin-left: 16px;
+    margin-top: 6px;
+}
+
+h6 {
+    margin-right: 58px;
+    margin-top: 15px;
+    font-size: 22px;
+    color: rgb(81, 74, 74);
+}
+
+#price {
+    text-align: center;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+#price button {
+    width: 110px;
+    height: 40px;
+    font-size: 20px;
+    margin: auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: transparent;
+    font-weight: bolder;
+    color: rgb(238, 119, 0);
+    border: 4px solid rgb(255, 166, 0);
+    padding: auto;
+    border-radius: 25px;
+}
+
+#price button:hover {
+    background-color: rgb(238, 119, 0);
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+
+}
+
+.Fname {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #F6F1EB;
+    text-align: center;
+    align-items: center;
+
+}
+
+.favrouite {
+    margin-top: 35px;
+}
+
+.favrouite h3 {
+    font-size: 35px;
+    display: flex;
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-left: 65px;
+    margin-top: 25px;
+}
+
+.BKname {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #F6F1EB;
+    text-align: center;
+    align-items: center;
+
+
+}
+
+.BK {
+    margin-top: 35px;
+}
+
+.BK h3 {
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-left: 65px;
+    margin-top: 25px;
+    background-color: transparent;
+}
+
+.Fpic {
+    background-color: #fff;
+}
+
+
+.BKnameIMP {
+    display: flex;
+    flex-direction: column;
+}
+
+.explore {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+
+.explore .btn {
+    width: 35rem;
+    text-align: center;
+    height: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: capitalize;
+    align-items: center;
+    color: #F6F1EB;
+    border-radius: 30px;
+    background-color: rgb(238, 119, 0);
+}
+
+.wall {
+    display: flex;
+    margin: 100px;
+    justify-content: center;
+}
+
+.wall img {
+    width: 80%;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    height: 500px;
+    background-color: #232323;
+}
+
+.footer .boxes {
+    display: flex;
+    margin-left: auto;
+    margin-bottom: 60px;
+    margin-right: auto;
+}
+
+.license {
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    color: #F6F1EB;
+    font-weight: 100;
+    margin: 30px;
+    width: 310px;
+    height: 500px;
+}
+
+.license h1 {
+    margin-left: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-right: auto;
+    font-size: 30px;
+    text-transform: capitalize;
+    /* margin-top: -90px; */
+    margin-top: 90px;
+    margin-bottom: 25px;
+}
+
+.license h2 {
+    font-size: 35px;
+    text-transform: capitalize;
+    text-align: justify;
+    font-weight: 10;
+    font-size: 20px;
+    font-family: monospace;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#app {
+    width: 510px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#app img {
+    margin-top: 50px;
+    margin-left: 35px;
+    margin-right: 35px;
+    width: 180px;
+    height: 55px;
+}
+
+.foot {
+    display: flex;
+    width: 100%;
+    margin-top: auto;
+    background-color: #232323;
+    flex-direction: column;
+}
+
+.foot img {
+    margin-left: 11%;
+    width: 100px;
+    height: 100px;
+}
+
+.foot p {
+    margin-left: 20%;
+    margin-right: auto;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    margin-top: 15px;
+}
+
+hr {
+    width: 80%;
+    opacity: .1;
+    margin: auto;
+}
+
+.pinfo {
+    display: flex;
+    align-items: center;
+}
+
+.icons {
+    display: flex;
+    margin-right: 290px;
+}
+
+.icons img {
+    width: 40px;
+    height: 40px;
+
+}
